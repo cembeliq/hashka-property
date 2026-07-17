@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -45,8 +46,14 @@ export function Footer() {
     <footer className="mt-auto border-t border-cream/10 bg-ink text-cream">
       <Container className="grid grid-cols-1 gap-12 py-16 lg:grid-cols-4">
         <div>
-          <Link href="/" className="font-serif-display text-2xl text-cream">
-            Hashka<span className="text-gold">.</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo-khairunnas.jpeg"
+              alt="Khoirunass Property"
+              width={618}
+              height={695}
+              className="h-24 w-auto rounded-md"
+            />
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
             Mitra terpercaya untuk properti hunian dan komersial premium di
@@ -105,7 +112,7 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="h-4 w-4 shrink-0 text-gold" />
-              hello@hashkaproperty.com
+              hello@khoirunassproperty.com
             </li>
           </ul>
         </div>
@@ -113,7 +120,7 @@ export function Footer() {
 
       <div className="border-t border-cream/10 py-6">
         <Container className="flex flex-col items-center justify-between gap-3 text-xs text-cream/40 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Hashka Property. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Khoirunass Property. All rights reserved.</p>
           <p>Berizin & terdaftar resmi.</p>
         </Container>
       </div>

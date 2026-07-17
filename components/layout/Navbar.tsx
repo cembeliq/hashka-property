@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -34,9 +35,16 @@ export function Navbar() {
         solid ? "bg-ink shadow-lg shadow-ink/20" : "bg-transparent"
       )}
     >
-      <Container className="flex h-20 items-center justify-between">
-        <Link href="/" className="font-serif-display text-2xl tracking-wide text-cream">
-          Hashka<span className="text-gold">.</span>
+      <Container className="flex h-28 items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo-khairunnas.jpeg"
+            alt="Khoirunass Property"
+            width={618}
+            height={695}
+            className="h-24 w-auto rounded-md"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-10 lg:flex">

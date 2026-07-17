@@ -5,9 +5,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/kontak/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Kontak | Hashka Property",
+  title: "Kontak | Khoirunass Property",
   description:
-    "Hubungi tim Hashka Property untuk konsultasi gratis, jadwal survey lokasi, atau pertanyaan seputar properti pilihan Anda.",
+    "Hubungi tim Khoirunass Property untuk konsultasi gratis, jadwal survey lokasi, atau pertanyaan seputar properti pilihan Anda.",
 };
 
 const contactInfo = [
@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@hashkaproperty.com",
+    value: "hello@khoirunassproperty.com",
   },
   {
     icon: Clock,
@@ -35,7 +35,7 @@ const contactInfo = [
 
 export default function KontakPage() {
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-36 pb-24">
       <Container>
         <SectionHeading
           eyebrow="Kontak"
@@ -63,7 +63,7 @@ export default function KontakPage() {
 
             <div className="aspect-video w-full overflow-hidden border border-ink/10">
               <iframe
-                title="Lokasi Kantor Hashka Property"
+                title="Lokasi Kantor Khoirunass Property"
                 src="https://www.google.com/maps?q=Jl.%20Sudirman%20Jakarta%20Selatan&output=embed"
                 className="h-full w-full"
                 loading="lazy"

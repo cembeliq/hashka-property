@@ -5,14 +5,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ListingClient } from "@/components/property/ListingClient";
 
 export const metadata: Metadata = {
-  title: "Listing Properti | Hashka Property",
+  title: "Listing Properti | Khoirunass Property",
   description:
-    "Jelajahi koleksi rumah, apartemen, dan ruko premium pilihan Hashka Property di berbagai kota strategis.",
+    "Jelajahi koleksi rumah, apartemen, dan ruko premium pilihan Khoirunass Property di berbagai kota strategis.",
 };
 
 export default function ListingPage() {
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-36 pb-24">
       <Container>
         <SectionHeading
           eyebrow="Listing Properti"

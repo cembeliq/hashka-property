@@ -37,7 +37,7 @@ export async function generateMetadata({
   const property = getPropertyBySlug(slug);
   if (!property) return {};
   return {
-    title: `${property.name} | Hashka Property`,
+    title: `${property.name} | Khoirunass Property`,
     description: property.description,
   };
 }
@@ -66,7 +66,7 @@ export default async function PropertyDetailPage({
   ];
 
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-36 pb-24">
       <Container>
         <div className="mb-8 flex items-center gap-2 text-xs uppercase tracking-wide text-ink/50">
           <Link href="/listing" className="hover:text-gold-dark">

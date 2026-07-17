@@ -16,9 +16,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Hashka Property | Agen Properti Modern & Terpercaya",
+  title: "Khoirunass Property | Agen Properti Modern & Terpercaya",
   description:
-    "Temukan hunian dan properti komersial premium pilihan Anda bersama Hashka Property. Rumah, apartemen, dan ruko di lokasi strategis dengan legalitas terjamin.",
+    "Temukan hunian dan properti komersial premium pilihan Anda bersama Khoirunass Property. Rumah, apartemen, dan ruko di lokasi strategis dengan legalitas terjamin.",
+  icons: {
+    icon: "/images/logo-khairunnas.jpeg",
+  },
 };
 
 export default function RootLayout({

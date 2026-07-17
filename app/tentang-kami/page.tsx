@@ -8,9 +8,9 @@ import { Stats } from "@/components/home/Stats";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Tentang Kami | Hashka Property",
+  title: "Tentang Kami | Khoirunass Property",
   description:
-    "Mengenal lebih dekat Hashka Property, agen properti premium yang telah dipercaya ratusan keluarga dan investor di Indonesia.",
+    "Mengenal lebih dekat Khoirunass Property, agen properti premium yang telah dipercaya ratusan keluarga dan investor di Indonesia.",
 };
 
 const values = [
@@ -46,7 +46,7 @@ export default function TentangKamiPage() {
       <section className="relative flex min-h-[60vh] items-end overflow-hidden bg-ink pb-16 pt-40">
         <Image
           src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80&auto=format&fit=crop"
-          alt="Kantor Hashka Property"
+          alt="Kantor Khoirunass Property"
           fill
           priority
           className="object-cover opacity-50"
@@ -68,7 +68,7 @@ export default function TentangKamiPage() {
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=1200&q=80&auto=format&fit=crop"
-                alt="Tim Hashka Property"
+                alt="Tim Khoirunass Property"
                 fill
                 className="object-cover"
               />
@@ -80,7 +80,7 @@ export default function TentangKamiPage() {
               title="12 Tahun Menghadirkan Hunian Berkualitas"
             />
             <p className="mt-6 leading-relaxed text-ink/70">
-              Sejak 2014, Hashka Property telah membantu ratusan keluarga dan
+              Sejak 2014, Khoirunass Property telah membantu ratusan keluarga dan
               investor menemukan properti yang tepat — mulai dari hunian
               pertama, rumah kedua untuk investasi, hingga ruko untuk memulai
               usaha. Kami memahami bahwa properti bukan sekadar transaksi,

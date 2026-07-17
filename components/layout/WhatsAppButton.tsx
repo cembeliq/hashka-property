@@ -5,7 +5,7 @@ export function WhatsAppButton() {
   return (
     <a
       href={whatsappLink(
-        "Halo, saya tertarik untuk konsultasi mengenai properti di Hashka Property."
+        "Halo, saya tertarik untuk konsultasi mengenai properti di Khoirunass Property."
       )}
       target="_blank"
       rel="noopener noreferrer"
