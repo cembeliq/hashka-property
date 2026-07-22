@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -15,7 +16,14 @@ const navLinks = [
   { href: "/kontak", label: "Kontak" },
 ];
 
+// Pages with their own dark hero section behind the navbar, where a
+// transparent-until-scroll navbar reads fine. Every other page has a plain
+// light background, so the light nav text becomes invisible unless the
+// navbar is forced solid from the start.
+const transparentOnTopRoutes = ["/", "/tentang-kami"];
+
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -26,7 +34,8 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const solid = scrolled || open;
+  const canBeTransparent = transparentOnTopRoutes.includes(pathname);
+  const solid = !canBeTransparent || scrolled || open;
 
   return (
     <header
