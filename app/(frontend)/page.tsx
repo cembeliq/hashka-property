@@ -6,6 +6,10 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { CtaSection } from "@/components/home/CtaSection";
 import { Faq } from "@/components/home/Faq";
 
+// Home renders CMS-managed content (featured listings, testimonials, FAQ),
+// so it's always rendered per-request instead of statically generated.
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>

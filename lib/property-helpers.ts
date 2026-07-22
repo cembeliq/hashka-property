@@ -12,7 +12,7 @@ export const typeLabel: Record<PropertyType, string> = {
   ruko: "Ruko",
 };
 
-export const whatsappNumber = "6281234567890";
+export const whatsappNumber = "6285647456431";
 
 export function whatsappLink(message: string): string {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

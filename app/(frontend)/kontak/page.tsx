@@ -14,22 +14,22 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Alamat Kantor",
-    value: "Jl. Sudirman Kav. 52-53, Jakarta Selatan",
+    value: "Gg. Manfaat, Dusun III, Kartasura, Kec. Kartasura, Kabupaten Sukoharjo",
   },
   {
     icon: Phone,
     label: "Telepon / WhatsApp",
-    value: "+62 812-3456-7890",
+    value: "+62 856-4745-6431",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "hello@khoirunassproperty.com",
+    value: "khoirunassproperty@gmail.com",
   },
   {
     icon: Clock,
     label: "Jam Operasional",
-    value: "Senin - Sabtu, 09.00 - 18.00 WIB",
+    value: "Senin - Sabtu, 09.00 - 16.00 WIB",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function KontakPage() {
             <div className="aspect-video w-full overflow-hidden border border-ink/10">
               <iframe
                 title="Lokasi Kantor Khoirunass Property"
-                src="https://www.google.com/maps?q=Jl.%20Sudirman%20Jakarta%20Selatan&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1009187320473!2d110.74477651139459!3d-7.556638792429411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14ee07c4d0d9%3A0xaf82cc9a68abdc20!2sHashka%20Solutindo!5e0!3m2!1sid!2sid!4v1720000000000!5m2!1sid!2sid"
                 className="h-full w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

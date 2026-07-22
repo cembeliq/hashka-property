@@ -61,14 +61,14 @@ export function Footer() {
           </p>
           <div className="mt-6 flex gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/khoirunassproperty"
               aria-label="Instagram"
               className="flex h-9 w-9 items-center justify-center border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
             >
               <InstagramIcon className="h-4 w-4" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/khoirunassproperty"
               aria-label="Facebook"
               className="flex h-9 w-9 items-center justify-center border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
             >
@@ -104,15 +104,17 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-cream/70">
             <li className="flex items-start gap-2.5">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              Jl. Sudirman Kav. 52-53, Jakarta Selatan
+              Gg. Manfaat, Dusun III, Kartasura, Kec. Kartasura, Kabupaten Sukoharjo
             </li>
             <li className="flex items-center gap-2.5">
               <Phone className="h-4 w-4 shrink-0 text-gold" />
-              +62 812-3456-7890
+              <a href="https://wa.me/6285647456431" target="_blank" rel="noopener noreferrer" className="text-cream/70 transition-colors hover:text-gold">
+                +62 856-4745-6431
+              </a>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="h-4 w-4 shrink-0 text-gold" />
-              hello@khoirunassproperty.com
+              khoirunassproperty@gmail.com
             </li>
           </ul>
         </div>

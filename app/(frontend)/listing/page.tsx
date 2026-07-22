@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ListingClient } from "@/components/property/ListingClient";
+import { getProperties } from "@/lib/data/properties";
 
 export const metadata: Metadata = {
   title: "Listing Properti | Khoirunass Property",
@@ -10,7 +11,13 @@ export const metadata: Metadata = {
     "Jelajahi koleksi rumah, apartemen, dan ruko premium pilihan Khoirunass Property di berbagai kota strategis.",
 };
 
-export default function ListingPage() {
+// Properties are managed in the CMS and can change at any time, so this
+// route is always rendered per-request instead of statically generated.
+export const dynamic = "force-dynamic";
+
+export default async function ListingPage() {
+  const properties = await getProperties();
+
   return (
     <div className="pt-36 pb-24">
       <Container>
@@ -22,7 +29,7 @@ export default function ListingPage() {
 
         <div className="mt-10">
           <Suspense fallback={null}>
-            <ListingClient />
+            <ListingClient properties={properties} />
           </Suspense>
         </div>
       </Container>

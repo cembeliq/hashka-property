@@ -16,17 +16,13 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PropertyGallery } from "@/components/property/PropertyGallery";
 import { PropertyGrid } from "@/components/property/PropertyGrid";
-import {
-  getPropertyBySlug,
-  getRelatedProperties,
-  properties,
-} from "@/lib/data/properties";
+import { getPropertyBySlug, getRelatedProperties } from "@/lib/data/properties";
 import { formatRupiah } from "@/lib/format";
 import { statusLabel, typeLabel, whatsappLink } from "@/lib/property-helpers";
 
-export function generateStaticParams() {
-  return properties.map((p) => ({ slug: p.slug }));
-}
+// Properties are managed in the CMS and can change at any time, so this
+// route is always rendered per-request instead of statically generated.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -34,7 +30,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const property = getPropertyBySlug(slug);
+  const property = await getPropertyBySlug(slug);
   if (!property) return {};
   return {
     title: `${property.name} | Khoirunass Property`,
@@ -48,10 +44,10 @@ export default async function PropertyDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const property = getPropertyBySlug(slug);
+  const property = await getPropertyBySlug(slug);
   if (!property) notFound();
 
-  const related = getRelatedProperties(property);
+  const related = await getRelatedProperties(property);
   const isSold = property.status === "terjual";
 
   const specs = [

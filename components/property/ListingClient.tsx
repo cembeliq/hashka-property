@@ -2,12 +2,11 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { properties } from "@/lib/data/properties";
-import { PropertyType } from "@/lib/types";
+import { Property, PropertyType } from "@/lib/types";
 import { PropertyFilter } from "@/components/property/PropertyFilter";
 import { PropertyGrid } from "@/components/property/PropertyGrid";
 
-export function ListingClient() {
+export function ListingClient({ properties }: { properties: Property[] }) {
   const searchParams = useSearchParams();
 
   const [keyword, setKeyword] = useState(searchParams.get("q") ?? "");
@@ -19,7 +18,7 @@ export function ListingClient() {
 
   const cities = useMemo(
     () => Array.from(new Set(properties.map((p) => p.city))).sort(),
-    []
+    [properties]
   );
 
   const filtered = useMemo(() => {
@@ -37,7 +36,7 @@ export function ListingClient() {
         return false;
       return true;
     });
-  }, [keyword, type, city, priceMax]);
+  }, [properties, keyword, type, city, priceMax]);
 
   return (
     <div className="space-y-8">

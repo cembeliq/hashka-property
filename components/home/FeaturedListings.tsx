@@ -5,8 +5,8 @@ import { PropertyGrid } from "@/components/property/PropertyGrid";
 import { Reveal } from "@/components/ui/Reveal";
 import { getFeaturedProperties } from "@/lib/data/properties";
 
-export function FeaturedListings() {
-  const featured = getFeaturedProperties();
+export async function FeaturedListings() {
+  const featured = await getFeaturedProperties();
 
   return (
     <section className="py-24">
