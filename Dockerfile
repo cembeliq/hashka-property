@@ -21,6 +21,7 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/next.config.ts ./next.config.ts
 COPY --from=builder /app/payload.config.ts ./payload.config.ts
 COPY --from=builder /app/lib ./lib
+COPY --from=builder /app/scripts ./scripts
 
 # Persisted across deploys: SQLite database and uploaded property images.
 # Mount host/named volumes here in production, and supply PAYLOAD_SECRET
@@ -29,4 +30,4 @@ RUN mkdir -p /app/data /app/media
 VOLUME ["/app/data", "/app/media"]
 
 EXPOSE 3000
-CMD ["bun", "run", "start"]
+CMD ["sh", "-c", "bun run scripts/init-db.ts && bun run start"]

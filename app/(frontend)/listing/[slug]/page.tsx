@@ -18,7 +18,7 @@ import { PropertyGallery } from "@/components/property/PropertyGallery";
 import { PropertyGrid } from "@/components/property/PropertyGrid";
 import { getPropertyBySlug, getRelatedProperties } from "@/lib/data/properties";
 import { formatRupiah } from "@/lib/format";
-import { statusLabel, typeLabel, whatsappLink } from "@/lib/property-helpers";
+import { statusLabel, stripHtml, typeLabel, whatsappLink } from "@/lib/property-helpers";
 
 // Properties are managed in the CMS and can change at any time, so this
 // route is always rendered per-request instead of statically generated.
@@ -34,7 +34,7 @@ export async function generateMetadata({
   if (!property) return {};
   return {
     title: `${property.name} | Khoirunass Property`,
-    description: property.description,
+    description: stripHtml(property.description).slice(0, 160),
   };
 }
 
@@ -107,9 +107,10 @@ export default async function PropertyDetailPage({
 
             <div className="mt-10">
               <h2 className="font-serif-display text-xl text-ink">Deskripsi</h2>
-              <p className="mt-3 leading-relaxed text-ink/70">
-                {property.description}
-              </p>
+              <div
+                className="mt-3 space-y-3 leading-relaxed text-ink/70 [&_a]:text-gold-dark [&_a]:underline [&_li]:ml-5 [&_ol]:list-decimal [&_strong]:font-semibold [&_ul]:list-disc"
+                dangerouslySetInnerHTML={{ __html: property.description }}
+              />
             </div>
 
             <div className="mt-10">

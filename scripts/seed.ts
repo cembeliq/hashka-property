@@ -4,6 +4,38 @@ import { properties } from "./seed-properties-source";
 import { testimonials } from "./seed-testimonials-source";
 import { faqItems } from "./seed-faq-source";
 
+function toLexicalDescription(text: string) {
+  return {
+    root: {
+      type: "root",
+      direction: "ltr" as const,
+      format: "" as const,
+      indent: 0,
+      version: 1,
+      children: [
+        {
+          type: "paragraph",
+          direction: "ltr" as const,
+          format: "" as const,
+          indent: 0,
+          version: 1,
+          children: [
+            {
+              type: "text",
+              detail: 0,
+              format: 0,
+              mode: "normal",
+              style: "",
+              text,
+              version: 1,
+            },
+          ],
+        },
+      ],
+    },
+  };
+}
+
 async function getOrCreateMedia(
   payload: Awaited<ReturnType<typeof getPayload>>,
   url: string,
@@ -67,7 +99,7 @@ async function run() {
           landArea: property.landArea,
           buildingArea: property.buildingArea,
           images: imageIds,
-          description: property.description,
+          description: toLexicalDescription(property.description),
           facilities: property.facilities,
           featured: property.featured,
         },

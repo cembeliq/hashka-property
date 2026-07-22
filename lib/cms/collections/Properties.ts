@@ -111,7 +111,7 @@ export const Properties: CollectionConfig = {
     },
     {
       name: "description",
-      type: "textarea",
+      type: "richText",
       required: true,
     },
     {

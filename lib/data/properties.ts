@@ -1,3 +1,4 @@
+import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 import { getPayloadClient } from "@/lib/cms/getPayloadClient";
 import { Property } from "@/lib/types";
 
@@ -24,7 +25,9 @@ function toProperty(doc: any): Property {
     landArea: doc.landArea ?? 0,
     buildingArea: doc.buildingArea ?? 0,
     images: toImageUrls(doc.images),
-    description: doc.description,
+    description: doc.description
+      ? convertLexicalToHTML({ data: doc.description })
+      : "",
     facilities: doc.facilities ?? [],
     featured: Boolean(doc.featured),
   };
