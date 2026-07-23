@@ -108,9 +108,14 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <Phone className="h-4 w-4 shrink-0 text-gold" />
-              <a href="https://wa.me/6285647456431" target="_blank" rel="noopener noreferrer" className="text-cream/70 transition-colors hover:text-gold">
-                +62 856-4745-6431
-              </a>
+              <div className="flex flex-col gap-1">
+                <a href="https://wa.me/6285647456431" target="_blank" rel="noopener noreferrer" className="text-cream/70 transition-colors hover:text-gold">
+                  +62 856-4745-6431
+                </a>
+                <a href="https://wa.me/6285138094691" target="_blank" rel="noopener noreferrer" className="text-cream/70 transition-colors hover:text-gold">
+                  +62 851-3809-4691
+                </a>
+            </div>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="h-4 w-4 shrink-0 text-gold" />
